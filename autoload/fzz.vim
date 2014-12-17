@@ -8,7 +8,7 @@ if !exists("g:fzz_search_cmd")
   let g:fzz_search_cmd = "ag --nogroup --nocolor"
 endif
 
-function! fzz#Fzz(...)
+function! fzz#Fzz(grepcmd, ...)
   let l:fzz_executable = "fzz"
   let l:fzz_search_executable = get(split(g:fzz_search_cmd, " "), 0)
 
@@ -36,7 +36,7 @@ function! fzz#Fzz(...)
   let grepprg_bak=&grepprg
   try
     let &grepprg=l:fzzprg
-    execute "grep " . escape(l:fzzargs, '|')
+    execute a:grepcmd . " " . escape(l:fzzargs, '|')
   finally
     let &grepprg=grepprg_bak
   endtry
