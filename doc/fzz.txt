@@ -1,0 +1,25 @@
+*fzz.txt*  Interactive search in Vim
+
+Author:  Thorsten Ball <http://thorstenball.com>
+Repo:    https://github.com/mrnugget/vim-fzz
+License: Same as Vim (see |license|)
+
+INTRODUCTION                                    *fzz*
+
+Use fzz to interactively search through files in Vim.
+
+COMMANDS                                        *fzz-commands*
+
+                                                *fzz-:Fzz*
+:Fzz [arguments] {directory}
+                        Opens fzz with the arguments an initial input to
+                        the_silver_searcher.
+
+                        If {directory} is given it is used as the last
+                        argument for the_silver_searcher, effectively searching
+                        only in {directory}.
+
+                        The results of the search will be loaded into the
+                        quickfix list.
+
+ vim:tw=78:et:ft=help:norl:
