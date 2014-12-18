@@ -15,6 +15,9 @@ COMMANDS                                        *fzz-commands*
                         Opens fzz with the arguments as initial input to
                         the_silver_searcher.
 
+                        If no arguments are given the initial input is a blank
+                        string.
+
                         If {directory} is given it is used as the last
                         argument for the_silver_searcher, effectively searching
                         only in {directory}.

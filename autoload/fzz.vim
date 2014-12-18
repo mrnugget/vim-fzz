@@ -22,9 +22,11 @@ function! fzz#Fzz(grepcmd, ...)
     return
   endif
 
-  let l:lastarg = a:000[-1]
-  if isdirectory(l:lastarg)
-    let l:fzzdir = l:lastarg
+  if a:0 == 0
+    let l:fzzdir = ""
+    let l:fzzargs = ""
+  elseif isdirectory(a:000[-1])
+    let l:fzzdir = a:000[-1]
     let l:fzzargs = join(a:000[:-2], ' ')
   else
     let l:fzzdir = ""
