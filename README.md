@@ -12,7 +12,7 @@ install this plugin pretty easily:
 
 ```
 cd ~/.vim/bundle
-git clone git://github.com/tpope/vim-surround.git
+git clone git@github.com:mrnugget/vim-fzz.git
 ```
 
 ## Usage
